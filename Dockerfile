@@ -1,16 +1,14 @@
-# This dockerfile uses the ubuntu image
-# VERSION 2 - EDITION 1
-# Author: docker_user
-# Command format: Instruction [arguments / command ] ..
+ARG IMAGE_BASE="ubuntu"
+ARG IMAGE_TAG="16.04"
 
 # Base image to use, this nust be set as the first line
-FROM debian:stretch-slim
+FROM ${RESTY_IMAGE_BASE}:${RESTY_IMAGE_TAG}
 
 # Maintainer: docker_user <docker_user at email.com> (@docker_user)
-MAINTAINER wangyi19 wangyi19@staff.weibo.com
+MAINTAINER wypjq wypjq@foxmail.com
 
 # Commands to update the image
 # RUN
 
 # Commands when creating a new container
-CMD /bin/bash
+CMD ["/bin/bash"]
